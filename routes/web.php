@@ -18,4 +18,4 @@ use Illuminate\Support\Facades\Route;
 //     return view('pages.index');
 // });
 
-Route::resource('/', ProductController::class);
+Route::resource('/products', ProductController::class);

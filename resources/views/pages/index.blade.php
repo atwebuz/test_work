@@ -19,9 +19,7 @@
                                         <button class="navbar-toggler shop-sidebar-toggler" type="button" data-toggle="collapse">
                                             <span class="navbar-toggler-icon d-block d-lg-none"><i class="feather icon-menu"></i></span>
                                         </button>
-                                        <div class="search-results">
-                                            {{-- {{ $products->total() }} {{__('results found')}} --}}
-                                        </div>
+                                      
                                     </div>
                                     <div class="view-options d-flex">
 
@@ -41,15 +39,7 @@
                 
                     <div class="shop-content-overlay"></div>
         
-                    <section id="ecommerce-searchbar">
-                        <div class="row mt-1">
-                            <div class="col-sm-12">
-                              
-
-                       
-                            </div>
-                        </div>
-                    </section>
+        
 
                     <section id="ecommerce-products" class="grid-view">
                         @if(count($products) >= 1)
@@ -57,10 +47,10 @@
                              <div class="card ecommerce-card">
                             <div class="card-content">
                                 <div class="item-img text-center">
-                                    {{-- <a href="{{route('products.show', $product->id)}}">
+                                    <a href="{{route('products.show', $product->id)}}">
                                 
-                                        <img class="img-fluid w-100" src="{{true ? asset('image/' . $product->images[0]->images) : asset('assets/images/no-image.png')}}" alt="image not-found" />
-                                    </a> --}}
+                                        <img class="img-fluid w-100" src="{{false ? asset('image/' . $product->images[0]->images) : asset('assets/images/no-image.png')}}" alt="image not-found" />
+                                    </a>
                                 </div>
                                 <div class="card-body">
                                     <div class="item-wrapper">
