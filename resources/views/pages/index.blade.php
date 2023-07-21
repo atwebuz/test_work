@@ -20,7 +20,7 @@
                                             <span class="navbar-toggler-icon d-block d-lg-none"><i class="feather icon-menu"></i></span>
                                         </button>
                                         <div class="search-results">
-                                            {{ $products->total() }} {{__('results found')}}
+                                            {{-- {{ $products->total() }} {{__('results found')}} --}}
                                         </div>
                                     </div>
                                     <div class="view-options d-flex">
@@ -57,10 +57,10 @@
                              <div class="card ecommerce-card">
                             <div class="card-content">
                                 <div class="item-img text-center">
-                                    <a href="{{route('products.show', $product->id)}}">
+                                    {{-- <a href="{{route('products.show', $product->id)}}">
                                 
                                         <img class="img-fluid w-100" src="{{true ? asset('image/' . $product->images[0]->images) : asset('assets/images/no-image.png')}}" alt="image not-found" />
-                                    </a>
+                                    </a> --}}
                                 </div>
                                 <div class="card-body">
                                     <div class="item-wrapper">
@@ -71,16 +71,16 @@
                                             </h6>
                                         </div>
                                     </div>
-                                    <div class="item-name">
+                                    {{-- <div class="item-name">
                                         <a href="{{route('products.show', $product->id)}}">{{$product->title}}</a>
                                         <p class="item-company">By <span class="company-name">{{$product->user->name}}</span></p>
-                                    </div>
+                                    </div> --}}
                                     <div>
                                         <p class="item-description">
                                           {{$product->paragraph}}
                                         </p>
-                                        <p><b>{{__('Category')}}: </b> {{$product->category->name}}</p>
-                                        <p><b>{{__('Created at')}}:</b> {{$product->created_at}}</p>
+                                        {{-- <p><b>{{__('Category')}}: </b> {{$product->category->name}}</p>
+                                        <p><b>{{__('Created at')}}:</b> {{$product->created_at}}</p> --}}
                                     </div>
                                 </div>
                                 <div class="item-options text-center d-flex">
@@ -122,19 +122,7 @@
                       
                     </section>
                 
-                    <section id="ecommerce-pagination">
-                        <div class="row">
-                            <div class="col-sm-12">
-
-                                <nav aria-label="Page navigation example">
-                                    <ul class="pagination justify-content-center mt-2">
-                                        {{$products->links()}}
-                                       
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </section>
+                
 
                 </div>
             </div>
