@@ -155,18 +155,7 @@
 
 
                                                    
-                                                    <div class="col-12">
-                                                        <div class="form-group row">
-                                                            <div class="col-md-4">
-                                                                <span>{{__('Color')}}</span>
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                                <input type="text" id="contact-info"
-                                                                    class="form-control py-2" 
-                                                                    name="color" placeholder="Rangi">
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                   
                                                     <div class="col-12">
                                                         <div class="form-group row">
                                                             <div class="col-md-4">
@@ -179,76 +168,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12">
-                                                        <div class="form-group row">
-                                                            <div class="col-md-4">
-                                                                <span>{{__('Date')}}</span>
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                                <input type="date" id="contact-info"
-                                                                    class="form-control py-2"
-                                                                    name="date_of_year" placeholder="Yili">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-12">
-                                                        <div class="form-group row">
-                                                            <div class="col-md-4">
-                                                                <span>{{__('Millage')}}</span>
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                                <input type="number" id="contact-info"
-                                                                    class="form-control py-2"
-                                                                    name="millage" placeholder="Millage">
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                  
-                                                    <div class="col-12">
-                                                        <div class="form-group row">
-                                                            <div class="col-md-4">
-                                                                <span>{{__('Transmission')}}</span>
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                               <select class="form-control" name="transmission" id="">
-                                                                <option value="Mexanika">Mexanika</option>
-                                                                <option value="Avtomat">Avtomat</option>
-                                                               </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                  
-                                                    <div class="col-12">
-                                                        <div class="form-group row">
-                                                            <div class="col-md-4">
-                                                                <span>{{__('Oil Type')}}</span>
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                               <select class="form-control" name="oil_type" id="">
-                                                                <option value="Benzin">Benzin</option>
-                                                                <option value="Gaz">Gaz</option>
-                                                                <option value="Dizel">Dizel</option>
-                                                                <option value="Elektron">Elektron</option>
-                                                               </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                   
-                                                    <div class="col-12">
-                                                        <div class="form-group row">
-                                                            <div class="col-md-4">
-                                                                <span>{{__('Condition')}}</span>
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                               <select class="form-control" name="condition" id="">
-                                                                <option value="Alo">Alo</option>
-                                                                <option value="Yaxshi">Yaxshi</option>
-                                                                <option value="Yomon">Yomon</option>
-                                                               </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
 
                                                     <div class="col-12">
                                                         <div class="form-group row">

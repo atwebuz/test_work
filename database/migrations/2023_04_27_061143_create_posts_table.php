@@ -21,12 +21,6 @@ return new class extends Migration
             $table->double('price');
             $table->double('rating')->nullable();
             $table->bigInteger('reads')->unsigned()->default(1)->index();
-            $table->date('date_of_year');
-            $table->float('millage');
-            $table->string('transmission');
-            $table->string('color');
-            $table->string('oil_type');
-            $table->string('condition')->nullable();
             $table->string('address');
             $table->boolean('is_salled')->default(false);
             $table->timestamps();

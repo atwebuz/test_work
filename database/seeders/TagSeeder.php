@@ -14,13 +14,10 @@ class TagSeeder extends Seeder
     public function run(): void
     {
        $tags = [
-        ['name' => 'Растаможена'],
-        ['name' => 'Электрозеркала'],
-        ['name' => 'стеклоподъемники'],
-        ['name' => 'Кондиционер'],
-        ['name' => 'Охранная'],
-        ['name' => 'система'],
-        ['name' => 'Парктроник'],
+        ['name' => 'super mazali'],
+        ['name' => 'mega mazali'],
+        ['name' => 'gipe mazali'],
+      
        ];
 
        Tag::insert($tags);

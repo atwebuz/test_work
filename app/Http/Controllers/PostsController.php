@@ -19,58 +19,14 @@ class PostsController extends Controller
      public function __construct(){
         $this->middleware('auth')->except(['index', 'show', 'search']);
      }
-    //  public function sorting(Request $request)
-    //  {
-    //      // dd($request);
-    //      $sortBy = $request->query('sort_by', 'price');
-    //      $sortOrder = $request->query('sort_order', 'asc');
-     
-    //      $posts = Post::orderBy($sortBy, $sortOrder)->get();
-     
- 
-    //      return view('pages.index', compact('posts','sortBy', 'sortOrder'));
-    //  }
 
      
-     public function search(Request $request)
-     {
-     if($request->ajax()){
-            $output="";
-            
-            $posts = Post::with('images')
-            ->filter($request->all())
-            ->orWhere('address', 'LIKE', '%'.$request->search.'%')
-            ->orWhere('transmission', 'LIKE', '%'.$request->search.'%')
-            ->orWhere('price', '=', $request->search)
-            ->get();
-            foreach ($posts as $post) {
-            $output.='<tr>'.
-            '<td>'.$post->id.'</td>'.
-            '<td> <img class="img-fluids" style="width:100px; height:100px;" src="/image/'.(count($post->images)>0 ? $post->images[0]->images  : 'no-image.png' ).'"/></td>'.
-            
-            '<td><a href="posts/'.$post->id.'">'.$post->title.'</a></td>'.
-            '<td>'.$post->paragraph.'</td>'.
-            '<td>$'.$post->price.'</td>'.
-            '</tr>';
-            }
-            return Response($output);
-     }
-    }
-
 
 
     
     public function index()
     {
 
-        // $itemds = [
-        //     'parent' => [
-        //         'children' => 'item'
-        //     ]
-        // ];
-
-        // dd(data_get($itemds, 'parent.children'));
-    //    dd($itemds['parent']['children']);
         return view('pages.index', [
             'posts' => Post::latest()->with('oneimage')->paginate(9),
             'categories' => Category::all(),
@@ -108,16 +64,10 @@ class PostsController extends Controller
         
             'title' => 'required',
             'paragraph' => 'required',
-            'color' => 'required',
+          
             'price' => 'required',
-            'date_of_year' => 'required',
-            'millage' => 'required',
-            'transmission' => 'required',
-            'oil_type' => 'required',
-            'condition' => 'required',
             'address' => 'required',
-            'images' => 'min:2|required',
-            'images.*' => 'mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'images.*' => 'min:2|mimes:jpeg,png,jpg,gif,svg|max:2048',
 
         ]);
 
@@ -126,13 +76,9 @@ class PostsController extends Controller
             'category_id' => $request->category_id,
             'title' => $request->title,
             'paragraph' => $request->paragraph,
-            'color' => $request->color,
+          
             'price' => $request->price,
-            'date_of_year' => $request->date_of_year,
-            'millage' => $request->millage,
-            'transmission' => $request->transmission,
-            'oil_type' => $request->oil_type,
-            'condition' => $request->condition,
+        
             'address' => $request->address
         ]);
 
@@ -212,16 +158,10 @@ class PostsController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'paragraph' => 'required',
-            'color' => 'required',
             'price' => 'required',
-            'date_of_year' => 'required',
-            'millage' => 'required',
-            'transmission' => 'required',
-            'oil_type' => 'required',
-            'condition' => 'required',
+
             'address' => 'required',
-            'images' => 'min:2|required',
-            'images.*' => 'mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'images.*' => 'min:2|mimes:jpeg,png,jpg,gif,svg|max:2048',
            
 
         ]);

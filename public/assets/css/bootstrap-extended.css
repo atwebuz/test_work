@@ -1689,13 +1689,22 @@ button, html [type='button'], [type='reset'], [type='submit'] {
 .header-navbar[class*='bg-'] .navbar-nav .search-input .input, .header-navbar[class*='bg-'] .navbar-nav .search-input .search-list .auto-suggestion span {
   color : #626262 !important;
 }
+body{
+  overflow-x: hidden;
+  padding: 0 20px;
+}
 .header-navbar.floating-nav {
-  margin : 1.3rem 2.2rem 0;
-  border-radius : 0.5rem;
-  position : fixed;
-  width : calc( 100vw - (100vw - 100%) - calc(2.2rem * 2) - 260px);
-  z-index : 12;
-  right : 0;
+  border-radius: 0.5rem;
+  margin-bottom: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 12;
+  left: 0;
+  right: 0;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
 .header-navbar.navbar-static-top {
   background : transparent;
