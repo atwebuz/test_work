@@ -27,6 +27,28 @@ class PostSeeder extends Seeder
             'updated_at' => now()
         ]);
       
+        Post::create([
+            'user_id' => 1,
+            'category_id' => 3,
+            'title' => 'Smuzi',
+            'paragraph' => 'Mazali smuzi kakteyl',
+            'price' => 3,
+            'rating' => 2,
+            "address" => "Sergeli",
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+        Post::create([
+            'user_id' => 1,
+            'category_id' => 2,
+            'title' => 'Pishiriq',
+            'paragraph' => 'Avganskiy pishiriq yongoq va bodomli',
+            'price' => 7,
+            'rating' => 2,
+            "address" => "Sergeli",
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
 
     }
 }

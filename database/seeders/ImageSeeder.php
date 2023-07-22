@@ -17,6 +17,14 @@ class ImageSeeder extends Seeder
             'post_id' => 1,
             'images' => 'tort.jpg'
         ]);
+        Images::create([
+            'post_id' => 2,
+            'images' => 'smuzi.jpg'
+        ]);
+        Images::create([
+            'post_id' => 3,
+            'images' => 'avganski.jpg'
+        ]);
       
         }
 }
