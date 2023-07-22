@@ -6,7 +6,8 @@
 
                 <ul class="d-flex">
                     <h2 style="" class="p-1 mt-1 "><a href="{{route('posts.index')}}">Laravel</a></h2>
-                    <h3 style="border: 3px dashed black;" class="p-1 mt-1 rounded"><a href="{{route('posts.create')}}">create post</a></h3>
+                    <h3 style="border: 3px dashed black;" class="p-1 mt-1 mr-2 rounded"><a href="{{route('posts.create')}}">create post</a></h3>
+                    <h3 style="border: 3px dashed black;" class="p-1 mt-1 rounded"><a href="/statistic">Statistic</a></h3>
                 </ul>
          
                 <ul class="nav navbar-nav float-right">
