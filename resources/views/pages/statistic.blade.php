@@ -210,16 +210,6 @@
                             <canvas id="product-price-chart1"></canvas>
 
                         </div>
-
-                        {{-- <div class="col-lg-6 my-4">
-                            <canvas id="product-price-chart2"></canvas>
-
-                        </div>
-
-                        <div class="col-lg-6 my-4">
-                            <canvas id="product-price-chart3"></canvas>
-
-                        </div> --}}
                     </div>
               
 
@@ -264,13 +254,10 @@
     <script>
         var ctx = document.getElementById('product-price-chart').getContext('2d');
         var ctx1 = document.getElementById('product-price-chart1').getContext('2d');
-        // var ctx2 = document.getElementById('product-price-chart2').getContext('2d');
-        // var ctx3 = document.getElementById('product-price-chart3').getContext('2d');
         var labels = {!! json_encode($labels) !!};
         var data = {!! json_encode($data) !!};
         var labels1 = {!! json_encode($labels1) !!};
         var data1 = {!! json_encode($data1) !!};
-     ~
 
         var chart = new Chart(ctx, {
             type: 'line',
@@ -315,52 +302,6 @@
                 }
             }
         });
-
-
-        // var chart2 = new Chart(ctx2, {
-        //     type: 'line',
-        //     data: {
-        //         labels: labels2,
-        //         datasets: [{
-        //             label: 'rating bo`yicha',
-        //             data: data2,
-        //             backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        //             borderColor: 'red ',
-        //             borderWidth: 3
-        //         }]
-        //     },
-        //     options: {
-        //         responsive: true,
-        //         scales: {
-        //             y: {
-        //                 beginAtZero: true
-        //             }
-        //         }
-        //     }
-        // });
-
-        // var chart3 = new Chart(ctx3, {
-        //     type: 'line',
-        //     data: {
-        //         labels: labels3,
-        //         datasets: [{
-        //             label: 'rating bo`yicha',
-        //             data: data3,
-        //             backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        //             borderColor: 'black ',
-        //             borderWidth: 3
-        //         }]
-        //     },
-        //     options: {
-        //         responsive: true,
-        //         scales: {
-        //             y: {
-        //                 beginAtZero: true
-        //             }
-        //         }
-        //     }
-        // });
-       
     </script>
 
 
@@ -368,4 +309,3 @@
 <!-- END: Body-->
 
 </html>
-

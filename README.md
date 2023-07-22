@@ -13,6 +13,8 @@
 ![Screen 1](./public/assets/image/../../image/img2.png)
 ## Tortlar
 ![Screen 1](./public/assets/image/../../image/img3.png)
+## Statistic
+![Screen 1](./public/assets/image/../../image/img4.jpg)
 
 ## ishlatish
 ishlatish
@@ -25,5 +27,5 @@ ishlatish
 6) .env -> da database connection mysql ni sqlite qlsh
 7) php artisan key:generate
 8) php artisan migrate 
-9)  php artisan serve
+    1)  php artisan serve
 
